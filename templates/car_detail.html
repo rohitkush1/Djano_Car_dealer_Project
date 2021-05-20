@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    Deaker : {{cars.dealer.name}}
+    <br>Deaker E-mail : {{cars.dealer.email}}
+    <br>Deaker E-mail : {{cars.dealer.email}}
+    <br>Categores : {{cars.category}}
+
+    <br>Car Brand : {{cars.brand}}
+    <br> Miles : {{cars.miles}}
+    <br>Car Transmission : {{cars.transmission}}
+    <br>Year : {{cars.year}}
+    <br>Power : {{cars.power}} hp
+    <br>Fual : {{cars.fual}} lt
+    <br>
+    <h4>Car Price : {{cars.price}} $</h4>
+
+    Car Description : {{cars.description}}
+    <br><br>
+
+    Car Image :
+    <!-- Image Main -->
+    <div class="row">
+        {% if cars.image_main %}
+            <div class="col-md-3">
+                <img src="{{ cars.image_main.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+
+        <!-- Image 1 -->
+        {% if cars.image1 %}
+            <div class="col-md-3">
+                <img src="{{ cars.image1.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+
+        <!-- Image 2 -->
+        {% if cars.image2 %}
+            <div class="col-md-3">
+                <img src="{{ cars.image2.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+
+        <!-- Image 3 -->
+        {% if cars.image3 %}
+            <div class="col-md-3">
+                <img src="{{ cars.image3.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+
+        <!-- Image 4 -->
+        {% if cars.image4 %}
+            <div class="col-md-3">
+                <img src="{{ cars.image4.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+
+        <!-- Image 5 -->
+        {% if cars.image5 %}
+            <div class="col-md-3">
+                <img src="{{ cars.image5.url }}" width="200px" height="150px" alt="">
+            </div>
+        {% endif %}
+    </div>
+
+    {% endblock %}
+</div>
